@@ -157,3 +157,10 @@ pip install -r requirements.txt
 MIT. Veja [LICENSE](LICENSE).
 
 ---
+
+## ⚠️ Disclaimer
+
+Esta solução foi desenvolvida com finalidade exclusivamente laboratorial e educacional.
+O uso em ambientes de produção deve considerar critérios adicionais de segurança, desempenho, conformidade e manutenção, que não estão contemplados neste projeto.
+
+---
