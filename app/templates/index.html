@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Translator (Azure OpenAI LAB)</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Translator (Azure OpenAI LAB)</h1>
+        <form id="uploadForm" action="/translate" method="post" enctype="multipart/form-data">
+            <label for="file">Select PDF (English, max 2MB):</label>
+            <input type="file" id="file" name="file" accept="application/pdf" required>
+            <input type="hidden" name="source_lang" value="en">
+            <input type="hidden" name="target_lang" value="pt-BR">
+            <button type="submit">Translate</button>
+        </form>
+        <div id="status"></div>
+    </div>
+    <script>
+        const form = document.getElementById('uploadForm');
+        const statusDiv = document.getElementById('status');
+        form.onsubmit = function(e) {
+            statusDiv.innerHTML = "Uploading and translating, please wait...";
+        }
+    </script>
+</body>
+</html>

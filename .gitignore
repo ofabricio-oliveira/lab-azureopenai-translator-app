@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+.env.*
+*.sqlite3
+*.db
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+
+# App
+app.zip
+uploads/
+outputs/
+*.log
+
+# Test
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Setup & Documentation (not part of app)
+GITHUB_SETUP.md
