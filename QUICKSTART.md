@@ -72,4 +72,3 @@ INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
 
 - **Guia completo:** [COMECE AQUI (START_HERE.md)](START_HERE.md)
 - **Documentação:** [README.md](README.md)
-- **Publicar GitHub:** [GITHUB_SETUP.md](GITHUB_SETUP.md)
