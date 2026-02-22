@@ -123,7 +123,6 @@ app/
 ✅ API Assíncrona com FastAPI  
 ✅ Variáveis de ambiente e configurações  
 ✅ Arquivos e requisitos  
-✅ Publicação no GitHub para portfólio  
 
 ---
 
@@ -134,7 +133,7 @@ app/
 **Verificar:**
 - ✅ `AZURE_OPENAI_BASE_URL` corresponde ao recurso Azure
 - ✅ `AZURE_OPENAI_MODEL_DEPLOYMENT` é o nome EXATO do deployment (verifique em Azure AI Foundry)
-- ✅ `AZURE_OPENAI_API_VERSION` é `2024-12-01-preview`
+- ✅ `AZURE_OPENAI_API_VERSION` é `2024-12-01-preview` ou o que você deployou, verifique no Foundry.
 - ✅ Não há `/` no final de `AZURE_OPENAI_BASE_URL`
 
 ### Erro: "AsyncClient got unexpected keyword argument 'proxies'"

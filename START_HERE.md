@@ -4,21 +4,20 @@
 
 Você está prestes a construir algo incrível! 🚀
 
-Este é o guia completo para aprender como **integrar Azure OpenAI com Python de verdade**. Vamos criar um **tradutor inteligente de PDFs** que usa IA para traduzir documentos de inglês para português - tudo rodando localmente no seu computador.
+Este é o guia completo para aprender como **integrar Azure OpenAI com Python de verdade**. Vamos criar um **tradutor inteligente de PDFs** que usa IA para traduzir documentos de inglês para português! Tudo rodando localmente no seu computador.
 
-Perfeito para aprender, experimentar, testar ideias e criar algo legal pro seu portfólio. Este guia foi pensado para rodar em **Windows 10, Windows 11 ou Windows Server** - escolha a sua máquina favorite. 💻
+Perfeito para aprender, experimentar, testar ideias e criar algo legal pro seu portfólio. Este guia foi pensado para rodar em **Windows 10, Windows 11 ou Windows Server** escolha a sua versão do Windows favorita. 💻
 
 ---
 
 ## 📋 O Que Você Vai Fazer
 
 1. ✅ Instalar Python, Git e Azure CLI
-2. ✅ Rodar o projeto localmente
-3. ✅ Testar com um PDF
-4. ✅ Fazer deploy no Azure
-5. ✅ Publicar no GitHub
+2. ✅ Fazer deploy no Azure
+3. ✅ Rodar o projeto localmente
+4. ✅ Testar com um PDF
 
-**Tempo total:** ~2 horas (incluindo leitura)
+**Tempo total estimado:** ~2 horas (incluindo leitura)
 
 ---
 
@@ -28,7 +27,7 @@ Perfeito para aprender, experimentar, testar ideias e criar algo legal pro seu p
 
 1. Abra o **Edge** ou outro navegador
 2. Acesse: `https://www.python.org/downloads/`
-3. ⚠️ **CRÍTICO:** Baixe **Python 3.11.x ou 3.12.x** (NÃO use 3.13+ ou 3.14+)
+3. ⚠️ **CRÍTICO:** Baixe **Python 3.11.x ou 3.12.x** (NÃO use 3.13+ ou 3.14+ pois não foi validado nestas versões)
    - Clique em **"Downloads"** no menu
    - Role até **"Looking for a specific release?"**
    - Escolha **"Python 3.12.x"** (versão estável recomendada)
@@ -396,13 +395,12 @@ Você completou com sucesso:
 
 1. **Compartilhe no LinkedIn:**
    - Escreva sobre sua jornada aprendendo Azure OpenAI
-   - Compartilhe o link do seu repositório GitHub
-   - Destaque: "Integrei Azure OpenAI com FastAPI"
+   - Destaque a utilizção de serviços do Azure + Python
 
-2. **Adicione ao portfólio:**
-   - Link do GitHub no seu currículo
-   - Screenshot do projeto rodando
-   - Descrição técnica: "Automação de tradução de PDFs com IA"
+2. **Adicione ao seu portfólio:**
+   - Adicione ao seu GitHub
+   - Adicione o Screenshot do seu projeto rodando
+   - Faça a sua Descrição técnica: "Automação de tradução de PDFs com IA"
 
 3. **Continue aprendendo:**
    - Leia [README.md](README.md) para entender melhor a arquitetura
@@ -417,7 +415,6 @@ Você completou com sucesso:
 - **Documentação completa:** [README.md](README.md)
 - **Troubleshooting:** [README.md - Troubleshooting](README.md#-troubleshooting)
 - **Guia rápido:** [QUICKSTART.md](QUICKSTART.md)
-- **Publicar no GitHub:** [GITHUB_SETUP.md](GITHUB_SETUP.md)
 - **Mais conteúdo educacional:** [fabricio.tech](https://fabricio.tech)
 
 ---
