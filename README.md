@@ -17,9 +17,9 @@
 
 ---
 
-## 💼 Caso de Uso Real
+## 💼 Exemplo de Caso de Uso do Lab
 
-Imagina que sua equipe recebe **documentos técnicos em inglês todos os dias** de parceiros e clientes. Você precisa compartilhá-los em português com stakeholders, mas copiar de um PDF, traduzir manualmente e formatar é lento e propenso a erros.
+Imagine que sua equipe recebe **documentos técnicos em inglês todos os dias** de parceiros e clientes. Você precisa compartilhá-los em português com stakeholders, mas copiar de um PDF, traduzir manualmente e formatar é lento e propenso a erros.
 
 **Com este projeto:** Você sobe o PDF inglês no navegador, clica "Traduzir", e em 30 segundos tem um PDF completo em português pronto para download.
 
@@ -30,7 +30,7 @@ Imagina que sua equipe recebe **documentos técnicos em inglês todos os dias** 
 ## 🛠️ Requisitos
 
 - **Seu computador:** Windows 10/11 ou Windows Server 2025
-- **Python:** 3.11 ou 3.12 (⚠️ NÃO use 3.13+ ou 3.14+)
+- **Python:** 3.11 ou 3.12 (⚠️ NÃO validado com versões 3.13+ ou 3.14+)
 - **Conta Azure:** Com recurso Azure OpenAI criado
 - **VS Code:** Recomendado (opcional)
 - **Internet:** Conexão estável
@@ -43,13 +43,15 @@ Imagina que sua equipe recebe **documentos técnicos em inglês todos os dias** 
 |------|-------|----------|
 | **[COMECE AQUI (START_HERE.md)](START_HERE.md)** | ~2h | Primeira vez? Comece aqui! |
 | **[RESUMO RÁPIDO (QUICKSTART.md)](QUICKSTART.md)** | ~10 min | Já tem tudo? Rode rápido |
-| **[GITHUB (GITHUB_SETUP.md)](GITHUB_SETUP.md)** | ~30 min | Pronto pra publicar? |
-
 ---
 
-## 🚀 Como Rodar (Resumo)
+## 🎯 Caso esteja começando do zero, vá por aqui:
 
-Para quem já tem tudo configurado:
+👉 **Leia [COMECE AQUI (START_HERE.md)](START_HERE.md)** para o guia passo a passo completo!
+
+## 🚀 Caso Já Tenha Noções do Funcionamento, Veja o Resumo de Como Rodar
+
+Para quem já tem tudo configurado, em resumo será:
 
 ```powershell
 # Instalar dependências
@@ -84,7 +86,7 @@ MAX_FILE_SIZE_MB=2
 
 - ✅ `AZURE_OPENAI_BASE_URL` NÃO deve terminar com `/`
 - ✅ `AZURE_OPENAI_MODEL_DEPLOYMENT` é **case-sensitive** (use exato do Azure AI Foundry)
-- ✅ `AZURE_OPENAI_API_VERSION` deve ser `2024-12-01-preview`
+- ✅ `AZURE_OPENAI_API_VERSION` deve ser `2024-12-01-preview` ou a que você utilizou.
 
 ---
 
@@ -156,7 +158,3 @@ pip install -r requirements.txt
 MIT. Veja [LICENSE](LICENSE).
 
 ---
-
-## 🎯 Próxima Etapa
-
-👉 **Leia [COMECE AQUI (START_HERE.md)](START_HERE.md)** para o guia passo a passo completo!
