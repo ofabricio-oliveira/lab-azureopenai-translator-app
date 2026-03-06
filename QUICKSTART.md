@@ -1,103 +1,84 @@
-# ⚡ Guia Rápido de Início (5 minutos)
+# ⚡ RESUMO RÁPIDO (5 minutos)
 
-Se você quer testar o projeto **RAPIDAMENTE** na sua máquina local, siga este guia.
-
----
-
-## ✅ O Que Você Precisa Ter
-
-- [ ] Windows 10/11/Server 2025
-- [ ] Python 3.11+ instalado ([baixar aqui](https://www.python.org/downloads/))
-- [ ] Conta Azure com recurso Azure OpenAI criado
+Para quem **já tem tudo pronto** (Python 3.11/3.12, Azure OpenAI configurado).
 
 ---
 
-## 🚀 Passo a Passo Rápido
+## 📋 Requisitos
 
-### 1. Clone o Projeto
+- Python 3.11 ou 3.12 (NÃO 3.13+/3.14+)
+- Recurso Azure OpenAI criado (endpoint + key + deployment)
+- VS Code (opcional)
+
+---
+
+## 🚀 Passos
+
+### 1. Abra a pasta do projeto
 
 ```powershell
-git clone https://github.com/ofabricio-oliveira/lab-azureopenai-translator-app.git
-cd lab-azureopenai-translator-app
+cd C:\seu\caminho\lab-azureopenai-translator-app
 ```
 
----
-
-### 2. Instale Dependências
+### 2. Crie ambiente virtual e instale dependências
 
 ```powershell
+python -m venv venv
+venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-⏱️ **Tempo:** ~2 minutos
+```bash
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
 
----
-
-### 3. Configure Variáveis de Ambiente
-
-**Copie o arquivo de exemplo:**
+### 3. Configure .env
 
 ```powershell
 copy .env.example .env
 ```
 
-**Edite o arquivo `.env` com suas credenciais Azure:**
-
-```env
-AZURE_OPENAI_BASE_URL=https://SEU-RECURSO.openai.azure.com
-AZURE_OPENAI_MODEL_DEPLOYMENT=gpt-4o
-AZURE_OPENAI_API_VERSION=2024-02-15-preview
-AZURE_OPENAI_API_KEY=SUA_CHAVE_AQUI
+```bash
+# macOS/Linux
+cp .env.example .env
 ```
 
-📍 **Onde encontrar:**
-- Acesse [Portal Azure](https://portal.azure.com)
-- Vá em **Azure OpenAI** > Seu recurso
-- Clique em **"Keys and Endpoint"**
-- Copie **Endpoint** e **KEY 1**
+Abra `.env` e preencha:
 
----
+```env
+AZURE_OPENAI_BASE_URL=https://seu-recurso.openai.azure.com
+AZURE_OPENAI_MODEL_DEPLOYMENT=gpt-4o
+AZURE_OPENAI_API_VERSION=2024-02-15-preview
+AZURE_OPENAI_API_KEY=sua-chave-aqui
+```
 
-### 4. Rode o Aplicativo
+### 4. Rode o servidor
 
-```powershell
+```bash
 uvicorn app.main:app --reload
 ```
 
-✅ **Pronto!** Abra: http://localhost:8000
+Saída esperada:
+```
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
 
----
+### 5. Teste no navegador
 
-### 5. Teste com um PDF
-
-1. Crie um PDF simples em inglês (Word > Salvar como PDF)
-2. Faça upload no navegador
+1. Abra: `http://localhost:8000`
+2. Faça upload de um PDF em inglês (texto simples, 1 página)
 3. Clique em **"Translate"**
-4. Baixe o PDF traduzido! 🎉
+4. Aguarde 10-30 segundos
+5. Baixe o PDF traduzido! 🎉
+
+✅ **Pronto!**
 
 ---
 
-## 🆘 Erros Comuns
+## 🆘 Precisa de ajuda?
 
-### `ModuleNotFoundError: No module named 'fastapi'`
-**Solução:** `pip install -r requirements.txt`
-
-### `RuntimeError: Azure OpenAI configuration missing`
-**Solução:** Verifique se preencheu corretamente o arquivo `.env`
-
-### `RuntimeError: Azure OpenAI API key not found`
-**Solução:** Copie a chave do Portal Azure e cole em `AZURE_OPENAI_API_KEY` no `.env`
-
----
-
-## 📖 Quer Fazer Deploy no Azure?
-
-Veja o guia completo em: [README.md](README.md#-como-fazer-deploy-no-azure)
-
----
-
-## 🤝 Precisa de Ajuda?
-
-- [README Completo](README.md) - Instruções detalhadas
-- [Troubleshooting](README.md#-troubleshooting) - Soluções para problemas
-- [Azure OpenAI Docs](https://learn.microsoft.com/azure/ai-services/openai/) - Documentação oficial
+- **Guia completo:** [COMECE AQUI (START_HERE.md)](START_HERE.md)
+- **Documentação:** [README.md](README.md)
