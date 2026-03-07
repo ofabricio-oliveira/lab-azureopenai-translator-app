@@ -57,45 +57,43 @@ python --version
 1. Abra: `https://portal.azure.com`
 2. Faça login com sua conta Microsoft
 
-### 2.2 — Criar recurso Azure OpenAI
+### 2.2 — Criar recurso via Microsoft Foundry
 
-1. Na barra de busca, digite: **"Azure OpenAI"**
-2. Clique em **"Azure OpenAI"** nos resultados
-3. Clique em **"+ Create"**
-4. Preencha:
+O Azure OpenAI agora é gerenciado pelo **Microsoft Foundry**. Para criar o recurso:
+
+1. Na barra de busca do portal, digite: **"Azure OpenAI"**
+2. Clique em **"Azure OpenAI"** nos resultados — você verá a página **"Microsoft Foundry | Azure OpenAI"**
+3. Clique em **"+ Create"** — aparecerão duas opções:
+   - **Foundry (Recommended)** — cria um recurso Foundry completo ✅
+   - **Azure OpenAI** — modo clássico (legado)
+4. Selecione **"Foundry (Recommended)"**
+5. Na tela **"Create a Foundry resource"**, preencha:
    - **Subscription:** Selecione sua assinatura
    - **Resource group:** Clique "Create new" → `openai-lab-rg`
-   - **Region:** `East US` (boa disponibilidade de quota)
    - **Name:** `meu-openai-lab-2026` (nome único)
-   - **Pricing tier:** `Standard S0`
-5. Clique **"Review + create"** → **"Create"**
-6. Aguarde ~2 minutos → **"Go to resource"**
+   - **Region:** `East US` (boa disponibilidade de quota)
+6. Em **"Your first project"**:
+   - **Default project name:** Deixe o padrão `proj-default` ou digite um nome (ex: `pdf-translator-project`)
+7. Em **"Content Review Policy"**, leia o aviso e prossiga
+8. Clique **"Review + create"** → **"Create"**
+9. Aguarde ~2 minutos → **"Go to resource"**
 
 ### 2.3 — Obter Endpoint e Key
 
-1. No recurso, menu esquerdo: **"Keys and Endpoint"**
+1. No recurso criado, menu esquerdo: **"Keys and Endpoint"**
 2. Copie:
    - **Endpoint:** `https://meu-openai-lab-2026.openai.azure.com/`
    - **KEY 1:** Clique no ícone de copiar
 
 ### 2.4 — Criar Deployment do Modelo (GPT)
 
-1. No recurso Azure OpenAI, no menu superior, clique em **"Go to Azure AI Foundry portal"**
-2. Isso abre o **Azure AI Foundry** (portal dedicado para IA)
-
-**⚠️ Primeira vez? Se aparecer prompt para criar projeto:**
-   - Clique **"Create a project"**
-   - **Project name:** `pdf-translator-project` (ou qualquer nome)
-   - Clique **"Create"** e aguarde ~1 minuto
-
-**Criar o Deployment:**
-
-3. No menu esquerdo, clique em **"Deployments"**
-4. Clique em **"+ Deploy model"** ou **"+ Create"**
+1. No recurso, menu esquerdo em **"Use with Foundry"**, clique em **"Foundry"** — isso abre o **Microsoft Foundry portal** (`ai.azure.com`)
+2. No Foundry portal, no menu esquerdo, clique em **"Deployments"** (ou **"Models + endpoints"**)
+3. Clique em **"+ Deploy model"** → **"Deploy base model"**
+4. Selecione o modelo **`gpt-4o`** e clique em **"Confirm"**
 5. Preencha:
-   - **Model:** `gpt-4o` (recomendado — gpt-4 está deprecated)
    - **Deployment name:** `gpt-4o` (use o mesmo nome do modelo para facilitar)
-   - **Model version:** Deixe `Default`
+   - **Model version:** Deixe `Default` ou `Auto-update to default`
    - **Deployment type:** Standard
 6. Clique **"Deploy"**
 7. Aguarde até status **"Succeeded"**

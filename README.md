@@ -21,6 +21,8 @@
 
 O [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview) é um serviço do Azure que fornece acesso aos modelos da OpenAI (GPT-4o, GPT-4, GPT-3.5, etc.) através de uma API segura e gerenciada pela Microsoft. Diferente da API pública da OpenAI, o Azure OpenAI oferece compliance empresarial, rede privada, controle de acesso (RBAC) e integração nativa com outros serviços Azure.
 
+O Azure OpenAI agora faz parte do **[Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry)** — a plataforma unificada da Microsoft para IA. No portal Azure, ao criar um recurso Azure OpenAI, a opção recomendada é criar um **Foundry resource**, que organiza seus modelos, deployments e projetos em um único lugar.
+
 Neste lab utilizamos o modelo GPT para tradução de texto:
 
 | Feature | O que faz | Exemplo de saída |
@@ -31,14 +33,15 @@ Neste lab utilizamos o modelo GPT para tradução de texto:
 
 > **Referências oficiais:**
 > - [Azure OpenAI Service](https://learn.microsoft.com/en-us/azure/ai-services/openai/overview)
-> - [Quickstart: GPT Chat Completions](https://learn.microsoft.com/en-us/azure/ai-services/openai/chatgpt-quickstart)
+> - [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/foundry/what-is-foundry)
+> - [Criar recurso Foundry](https://learn.microsoft.com/en-us/azure/ai-services/multi-service-resource)
 > - [Azure OpenAI Models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models)
 
-### Este app vs. Azure AI Foundry
+### Este app vs. Microsoft Foundry Portal
 
-O Azure também oferece o [Azure AI Foundry](https://ai.azure.com/), um portal web para testar modelos diretamente no navegador sem escrever código.
+O Azure também oferece o [Microsoft Foundry Portal](https://ai.azure.com/), uma interface web para testar modelos, criar agentes e prototipar diretamente no navegador sem escrever código.
 
-**A diferença é que este lab é um app Python próprio** que consome a mesma API via SDK — mostrando como integrar o Azure OpenAI em uma aplicação real. No Foundry você testa; aqui você aprende a construir.
+**A diferença é que este lab é um app Python próprio** que consome a mesma API via SDK — mostrando como integrar o Azure OpenAI em uma aplicação real. No Foundry portal você testa; aqui você aprende a construir.
 
 ---
 
