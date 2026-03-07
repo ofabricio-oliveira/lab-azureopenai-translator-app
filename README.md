@@ -164,7 +164,7 @@ AZURE_OPENAI_API_KEY=sua-chave-aqui
 
 ⚠️ **Pontos críticos:**
 - ✅ A key e o endpoint devem ser copiados exatamente do portal Azure
-- ✅ O deployment name deve corresponder ao que foi criado no Azure AI Foundry
+- ✅ O deployment name deve corresponder ao que foi criado no Microsoft Foundry Portal
 - ✅ **Não commite o `.env`!** Ele já está no `.gitignore`
 
 ---
@@ -185,7 +185,8 @@ lab-azureopenai-translator-app/
 │       └── styles.css               # Estilos
 ├── tests/
 │   ├── test_main.py                 # Testes das rotas
-│   └── test_translator_service.py   # Testes do serviço de tradução
+│   ├── test_translator_service.py   # Testes do serviço de tradução
+│   └── sample_english.pdf           # PDF de exemplo em inglês (para testes)
 ├── .env.example                     # Exemplo de variáveis de ambiente
 ├── .gitignore
 ├── Makefile                         # Atalhos: make run, make test
@@ -220,6 +221,8 @@ make test
 São **2 testes** cobrindo:
 - Rota principal (GET /)
 - Serviço de tradução (mock do Azure OpenAI)
+
+> **PDF de teste:** O arquivo `tests/sample_english.pdf` está incluído para testes manuais no navegador.
 
 ---
 

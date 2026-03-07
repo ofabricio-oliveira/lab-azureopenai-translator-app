@@ -80,24 +80,40 @@ O Azure OpenAI agora é gerenciado pelo **Microsoft Foundry**. Para criar o recu
 
 ### 2.3 — Obter Endpoint e Key
 
-1. No recurso criado, menu esquerdo: **"Keys and Endpoint"**
-2. Copie:
+1. No recurso criado, no menu esquerdo, expanda a seção **"Resource Management"**
+2. Clique em **"Keys and Endpoint"**
+3. Copie:
    - **Endpoint:** `https://meu-openai-lab-2026.openai.azure.com/`
    - **KEY 1:** Clique no ícone de copiar
 
-### 2.4 — Criar Deployment do Modelo (GPT)
+> **💡 Guarde esses valores!** Você vai precisar deles na Etapa 3.4 para configurar o `.env`.
 
-1. No recurso, menu esquerdo em **"Use with Foundry"**, clique em **"Foundry"** — isso abre o **Microsoft Foundry portal** (`ai.azure.com`)
-2. No Foundry portal, no menu esquerdo, clique em **"Deployments"** (ou **"Models + endpoints"**)
-3. Clique em **"+ Deploy model"** → **"Deploy base model"**
-4. Selecione o modelo **`gpt-4o`** e clique em **"Confirm"**
-5. Preencha:
+### 2.4 — Acessar o Microsoft Foundry Portal
+
+Para criar o deployment do modelo, precisamos ir ao **Microsoft Foundry Portal**.
+
+1. Ainda na página do recurso no Azure Portal, clique no botão **"Go to Foundry Portal"** (na parte superior da página)
+   - Isso abre o portal em `ai.azure.com`
+
+> **📝 O que é o Microsoft Foundry Portal?**
+>
+> O [Microsoft Foundry](https://ai.azure.com) é a plataforma unificada da Microsoft para IA. É onde você gerencia **modelos**, **deployments**, **agentes de IA** e **projetos**. Pense nele como o "painel de controle" dos seus recursos de IA no Azure.
+>
+> Neste lab, vamos usá-lo apenas para **criar o deployment do modelo GPT** — que é o passo que permite chamar o modelo via API.
+
+### 2.5 — Criar Deployment do Modelo (GPT)
+
+Já dentro do Microsoft Foundry Portal:
+
+1. No menu esquerdo, clique em **"Models + endpoints"** (seção **"My assets"**)
+2. Clique em **"+ Deploy model"** → **"Deploy base model"**
+3. Na lista de modelos, selecione **`gpt-4o`** e clique em **"Confirm"**
+4. Preencha:
    - **Deployment name:** `gpt-4o` (use o mesmo nome do modelo para facilitar)
-   - **Model version:** Deixe `Default` ou `Auto-update to default`
    - **Deployment type:** Standard
-6. Clique **"Deploy"**
-7. Aguarde até status **"Succeeded"**
-8. ✅ Anote o **Deployment name** exato: `gpt-4o`
+5. Clique **"Deploy"**
+6. Aguarde até status **"Succeeded"**
+7. ✅ Anote o **Deployment name** exato: `gpt-4o`
 
 **⚠️ Problemas comuns:**
 - **Erro de quota:** Use `gpt-4o-mini` (tem mais quota disponível)
@@ -189,45 +205,33 @@ INFO:     Application startup complete.
 
 ## 🧪 ETAPA 5: Testar com um PDF (10 minutos)
 
-### 5.1 — Criar um PDF de teste
+### 5.1 — PDF de teste
 
-Se você não tem um PDF em inglês, crie um:
-
-1. Abra o **Word** ou **Google Docs**
-2. Escreva um texto em inglês:
+O projeto já inclui um PDF de exemplo em inglês pronto para uso:
 
 ```
-Hello World!
-
-This is a simple test document for the Azure OpenAI PDF Translator.
-The translator will convert this English text to Portuguese using AI.
-
-Thank you for testing this project!
+tests/sample_english.pdf
 ```
 
-3. Salve como PDF (**File > Save As > PDF**)
+Você pode usar esse arquivo diretamente para testar. 🎯
+
+> **Alternativa:** Se preferir, crie seu próprio PDF:
+> 1. Abra o **Word** ou **Google Docs**
+> 2. Escreva um texto em inglês (ex: "Hello World! This is a test document.")
+> 3. Salve como PDF (**File > Save As > PDF**)
 
 ### 5.2 — Testar no navegador
 
 1. Abra: `http://localhost:8000`
 2. Você verá a página **"PDF Translator (Azure OpenAI LAB)"**
-3. Clique em **"Choose File"** e selecione o PDF em inglês
+3. Clique em **"Choose File"** e selecione o `tests/sample_english.pdf` (ou seu próprio PDF)
 4. Clique em **"Translate"**
 5. Aguarde 10-30 segundos
 6. O navegador **baixará automaticamente** o PDF traduzido!
 
 ### 5.3 — Verificar resultado
 
-Abra o PDF baixado e verifique se o texto está em português:
-
-```
-Olá Mundo!
-
-Este é um documento de teste simples para o Tradutor de PDF Azure OpenAI.
-O tradutor converterá este texto em inglês para português usando IA.
-
-Obrigado por testar este projeto!
-```
+Abra o PDF baixado e verifique se o texto foi traduzido para português.
 
 ✅ **Funcionou? Parabéns!**
 
