@@ -149,7 +149,7 @@ Crie um arquivo `.env` baseado em `.env.example`:
 ```env
 AZURE_OPENAI_BASE_URL=https://seu-recurso.openai.azure.com
 AZURE_OPENAI_MODEL_DEPLOYMENT=gpt-4o
-AZURE_OPENAI_API_VERSION=2024-02-15-preview
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
 AZURE_OPENAI_API_KEY=sua-chave-aqui
 ```
 
@@ -158,7 +158,7 @@ AZURE_OPENAI_API_KEY=sua-chave-aqui
 | `AZURE_OPENAI_BASE_URL` | ✅ | URL do recurso Azure OpenAI | — |
 | `AZURE_OPENAI_API_KEY` | ✅ | Chave de acesso (KEY 1 ou KEY 2) | — |
 | `AZURE_OPENAI_MODEL_DEPLOYMENT` | ✅ | Nome do deployment do modelo (ex: `gpt-4o`) | — |
-| `AZURE_OPENAI_API_VERSION` | ❌ | Versão da API | `2024-02-15-preview` |
+| `AZURE_OPENAI_API_VERSION` | ❌ | Versão da API | `2024-12-01-preview` |
 | `KEY_VAULT_URL` | ❌ | URL do Key Vault (para uso em produção) | `""` |
 | `MAX_FILE_SIZE_MB` | ❌ | Limite de tamanho do PDF em MB | `2` |
 

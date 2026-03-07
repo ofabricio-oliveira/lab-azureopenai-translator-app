@@ -51,7 +51,7 @@ Abra `.env` e preencha:
 ```env
 AZURE_OPENAI_BASE_URL=https://seu-recurso.openai.azure.com
 AZURE_OPENAI_MODEL_DEPLOYMENT=gpt-4o
-AZURE_OPENAI_API_VERSION=2024-02-15-preview
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
 AZURE_OPENAI_API_KEY=sua-chave-aqui
 ```
 

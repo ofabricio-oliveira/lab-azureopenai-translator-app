@@ -187,11 +187,13 @@ Edite o `.env` com os valores copiados na Etapa 2:
 ```env
 AZURE_OPENAI_BASE_URL=https://meu-openai-lab-2026.openai.azure.com
 AZURE_OPENAI_MODEL_DEPLOYMENT=gpt-4o
-AZURE_OPENAI_API_VERSION=2024-02-15-preview
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
 AZURE_OPENAI_API_KEY=sua-chave-copiada-aqui
 ```
 
 Após editar o arquivo, salve-o.
+
+> **📌 Onde encontrar a `API_VERSION`?** No Microsoft Foundry Portal, vá em **"Models + endpoints"** → clique no seu deployment (`gpt-4o`) → na seção **"Get Started"**, o código de exemplo mostra o valor de `api_version`. Use esse valor.
 
 > **💡 Nota:** As variáveis `KEY_VAULT_URL` e `MAX_FILE_SIZE_MB` são opcionais. Deixe `KEY_VAULT_URL` vazio para uso local.
 
