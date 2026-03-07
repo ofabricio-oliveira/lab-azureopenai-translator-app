@@ -108,9 +108,21 @@ Já dentro do Microsoft Foundry Portal:
 1. No menu esquerdo, clique em **"Models + endpoints"** (seção **"My assets"**)
 2. Clique em **"+ Deploy model"** → **"Deploy base model"**
 3. Na lista de modelos, selecione **`gpt-4o`** e clique em **"Confirm"**
+
+> **🤖 Por que o GPT-4o?**
+>
+> Escolhemos o `gpt-4o` por ser um modelo com **boa qualidade de tradução**, **amplamente disponível** nas regiões do Azure e com **quota acessível** para labs. Você pode usar outro modelo disponível na sua região — o importante é anotar o nome do deployment para configurar no `.env`.
+
 4. Preencha:
    - **Deployment name:** `gpt-4o` (use o mesmo nome do modelo para facilitar)
-   - **Deployment type:** Standard
+   - **Deployment type:** Altere para **Standard**
+
+> **⚙️ Por que Standard e não Global-Standard?**
+>
+> O portal seleciona **Global-Standard** por padrão. Essa opção roteia suas chamadas por **data centers ao redor do mundo**, o que significa que seus dados podem ser processados em qualquer região. Para um lab de aprendizado, funciona — mas em cenários reais, muitas empresas exigem que os dados fiquem em uma **região específica** (ex: compliance, LGPD).
+>
+> Escolhemos **Standard** porque o deployment fica **fixo na região que você escolheu** (ex: East US), garantindo previsibilidade e controle sobre onde seus dados são processados.
+
 5. Clique **"Deploy"**
 6. Aguarde até status **"Succeeded"**
 7. ✅ Anote o **Deployment name** exato: `gpt-4o`
